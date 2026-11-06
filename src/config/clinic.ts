@@ -111,7 +111,7 @@ export const clinic = {
   logo: null as string | null,
   audience: 'Adultos de Ilhéus e região',
   tone: 'acolhedor e sofisticado',
-  siteUrl: '',
+  siteUrl: 'https://leonardonetto-odonto.vercel.app',
   privacyEmail: '[E-MAIL PARA PRIVACIDADE]',
 
   /** Menu: segue os destaques do Instagram do consultório */
