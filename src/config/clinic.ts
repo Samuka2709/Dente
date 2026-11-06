@@ -230,6 +230,18 @@ export const clinic = {
     },
   ] as Professional[],
 
+  /**
+   * Vídeo de apresentação (formato vertical, como os Reels do Instagram).
+   * src null = mostra só a área reservada. Com autorização do Dr. Leonardo, salve o
+   * arquivo em public/video/ (MP4) e preencha src e poster, ex.: '/video/apresentacao.mp4'.
+   */
+  video: {
+    src: null as string | null,
+    poster: null as string | null,
+    title: 'Conheça o Dr. Leonardo',
+    text: 'Um pouco sobre o consultório e a forma de atender, contado pelo próprio Dr. Leonardo.',
+  },
+
   testimonials: [] as Testimonial[],
 
   hasBeforeAfter: false,

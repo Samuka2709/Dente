@@ -14,6 +14,7 @@ import { MobileCtaBar } from './components/MobileCtaBar';
 import { Team } from './components/Team';
 import { Testimonials } from './components/Testimonials';
 import { Treatments } from './components/Treatments';
+import { VideoIntro } from './components/VideoIntro';
 import { pendingMarkers, showBeforeAfter } from './lib/clinic-utils';
 import { useAnimations } from './lib/useAnimations';
 
@@ -33,6 +34,7 @@ export default function App() {
       <main id="conteudo">
         <Hero />
         <About />
+        <VideoIntro />
         <Treatments />
         <Highlights />
         <Differentials />
