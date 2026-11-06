@@ -5,27 +5,17 @@ import { fullAddress, mapsEmbedUrl, mapsUrl, phoneUrl, whatsappUrl } from '../li
 import { Ph } from './Ph';
 
 function MapEmbed() {
-  // Mapa só carrega quando a pessoa pede: mais leve e sem enviar dados ao Google antes disso
-  const [load, setLoad] = useState(false);
+  // Mapa sempre presente; loading="lazy" faz o navegador baixá-lo só quando a seção se aproxima da tela
   return (
     <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-green-deep md:aspect-[16/10]">
-      {load ? (
-        <iframe
-          title={`Mapa: ${clinic.name}`}
-          src={mapsEmbedUrl()}
-          className="absolute inset-0 h-full w-full border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      ) : (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
-          <MapPin aria-hidden size={30} strokeWidth={1.75} className="text-sand" />
-          <button type="button" onClick={() => setLoad(true)} className="btn btn-outline-light">
-            Carregar mapa
-          </button>
-          <p className="max-w-[30ch] text-sm text-sand">Ao carregar, o Google Maps recebe dados de navegação.</p>
-        </div>
-      )}
+      <iframe
+        title={`Mapa: ${clinic.name}`}
+        src={mapsEmbedUrl()}
+        className="absolute inset-0 h-full w-full border-0"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        allowFullScreen
+      />
     </div>
   );
 }
