@@ -73,7 +73,7 @@ export const clinic = {
   name: 'Dr. Leonardo Netto',
   specialty: 'Odontologia',
   city: 'Ilhéus',
-  neighborhood: '[BAIRRO]',
+  neighborhood: 'Centro',
   state: 'BA',
 
   responsible: {
@@ -90,9 +90,9 @@ export const clinic = {
   whatsappMessage: 'Olá, vim pelo site e gostaria de agendar uma avaliação.',
 
   address: {
-    street: '[RUA E NÚMERO]',
-    complement: '',
-    neighborhood: '[BAIRRO]',
+    street: 'Praça Rui Barbosa, 184',
+    complement: '1º andar',
+    neighborhood: 'Centro',
     city: 'Ilhéus',
     state: 'BA',
     zip: '[CEP]',
