@@ -251,7 +251,86 @@ export const clinic = {
     text: 'Um pouco sobre o consultório e a forma de atender, contado pelo próprio Dr. Leonardo.',
   },
 
-  testimonials: [] as Testimonial[],
+  /**
+   * Avaliações do perfil no Google (transcritas dos prints, sem emojis; nome abreviado).
+   * Publicar só com autorização do Dr. Leonardo.
+   */
+  googleRating: { score: '5,0', count: 23, url: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6' },
+  testimonials: [
+    {
+      author: 'Will T.',
+      source: 'Google',
+      text: 'Excelente profissional! Atendimento de qualidade, muito atencioso e transmite confiança em cada detalhe. Ambiente organizado e serviço impecável. Recomendo demais o trabalho do Dr. Leonardo Neto!',
+    },
+    {
+      author: 'Leticia L.',
+      source: 'Google',
+      text: 'Precisei fazer canal e o Dr. Leonardo foi incrível. Profissional super humano, me deixou tranquilo do início ao fim. Não senti dor nenhuma. O consultório é moderno, tecnológico e o serviço é de ótima qualidade. Super recomendo!!!!',
+    },
+    {
+      author: 'Amanda C.',
+      source: 'Google',
+      text: 'Dr. Leonardo é excelente. Atendimento de qualidade, profissional atencioso e serviço impecável. Superou minhas expectativas!',
+    },
+    {
+      author: 'Luizinho',
+      source: 'Google',
+      text: 'Meu pai fez a prótese com o Dr. Leonardo. Ele tinha receio do procedimento, mas o Dr. foi extremamente atencioso e cuidadoso com ele. Não poderia ter escolhido profissional melhor.',
+    },
+    {
+      author: 'Camila K.',
+      source: 'Google',
+      text: 'Fiz um implante unitário com o Dr. Leonardo e foi tudo impecável. Ambiente moderno, tecnológico e muito confortável. Atendimento de qualidade do início ao fim. Profissional excelente, recomendo de olhos fechados.',
+    },
+    {
+      author: 'Chrys C.',
+      source: 'Google',
+      text: 'Excelente profissional, trabalho impecável e atendimento top. Super recomendo de olhos fechados.',
+    },
+    {
+      author: 'Jhenefhen O.',
+      source: 'Google',
+      text: 'Ótimo profissional Dr Leonardo, me deixou super confiante e com um sorriso lindo. Indico demais!',
+    },
+    {
+      author: 'Diogo B.',
+      source: 'Google',
+      text: 'Melhor consultório odontológico da região! Mesmo morando em Itabuna, só vou nele pelo profissionalismo, qualidade e dedicação.',
+    },
+    {
+      author: 'Daniel M.',
+      source: 'Google',
+      text: 'Excelente profissional, fiquei muito feliz com o resultado do atendimento!! Super recomendo!!!!!',
+    },
+    {
+      author: 'Bruno L.',
+      source: 'Google',
+      text: 'Excelente profissional!! Atencioso e muito dedicado!! Super recomendo!!',
+    },
+    { author: 'Ingred N.', source: 'Google', text: 'Atendimento excelente! Melhor profissional.' },
+    { author: 'Thierry V.', source: 'Google', text: 'Excelente profissional, gostei muito do atendimento.' },
+    {
+      author: 'Tatiana V.',
+      source: 'Google',
+      text: 'Excelente atendimento, profissional da mais alta qualidade. Recomendo demais!',
+    },
+    { author: 'Karol T.', source: 'Google', text: 'Atendimento maravilhoso, doutor super atencioso!!' },
+    { author: 'Carlas A.', source: 'Google', text: 'Uma ótima experiência, doutor Leonardo é excelente profissional.' },
+    { author: 'Marli M.', source: 'Google', text: 'Atendimento de qualidade, excelente profissional!' },
+    {
+      author: 'Rafael L.',
+      source: 'Google',
+      text: 'Excelente profissional! Atendimento, tecnologia e profissionalismo!!!!!',
+    },
+    {
+      author: 'Achilles A.',
+      source: 'Google',
+      text: 'Super indico, atendimento humanizado e me senti muito confortável com o atendimento de Dr. Leonardo.',
+    },
+    { author: 'Adriane S.', source: 'Google', text: 'O melhor da região! Atendimento sem igual.' },
+    { author: 'Carolina N.', source: 'Google', text: 'Profissional maravilhoso!!!!' },
+    { author: 'Marcel C.', source: 'Google', text: 'Excelente profissional!' },
+  ] as Testimonial[],
 
   hasBeforeAfter: false,
   beforeAfter: [] as { treatment: string; before: string; after: string }[],
@@ -271,7 +350,7 @@ export const clinic = {
 
     treatmentsTitle: 'Tratamentos',
     treatmentsIntro: 'O que o consultório oferece. Toque em um tratamento para ver os detalhes.',
-    differentialsTitle: 'Por que agendar aqui',
+    differentialsTitle: 'Quem vem, aprova',
     teamTitle: 'Quem vai atender você',
     galleryTitle: 'O consultório',
 

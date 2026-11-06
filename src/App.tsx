@@ -12,7 +12,6 @@ import { Highlights } from './components/Highlights';
 import { clinic } from './config/clinic';
 import { MobileCtaBar } from './components/MobileCtaBar';
 import { Team } from './components/Team';
-import { Testimonials } from './components/Testimonials';
 import { Treatments } from './components/Treatments';
 import { VideoIntro } from './components/VideoIntro';
 import { pendingMarkers, showBeforeAfter } from './lib/clinic-utils';
@@ -42,7 +41,6 @@ export default function App() {
         {showBeforeAfter ? <BeforeAfter /> : <Gallery />}
         {/* Com um só profissional, a seção "Sobre" já o apresenta */}
         {clinic.team.length > 1 && <Team />}
-        <Testimonials />
         {showBeforeAfter && <Gallery />}
         <FAQ />
         <Contact />

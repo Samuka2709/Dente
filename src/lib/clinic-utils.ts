@@ -43,7 +43,7 @@ export const hoursSummary = () => clinic.hours.map((h) => `${h.label}, ${h.time}
 export const hasTestimonials = clinic.testimonials.length > 0;
 export const showBeforeAfter = clinic.hasBeforeAfter && clinic.beforeAfter.length > 0;
 
-export const navItems = [...clinic.nav, ...(hasTestimonials ? [{ href: '#depoimentos', label: 'Depoimentos' }] : [])];
+export const navItems = [...clinic.nav];
 
 /**
  * Lista de marcadores pendentes (procura recursivamente no objeto de configuração).

@@ -42,7 +42,8 @@ export default function Privacy() {
           <h2>Com quem compartilhamos</h2>
           <p>
             Não vendemos nem compartilhamos seus dados com terceiros para fins de publicidade. A conversa acontece pelo
-            WhatsApp, que tem a própria política de privacidade. A página exibe um mapa do Google Maps; ao carregá-lo, o Google recebe dados de navegação.
+            WhatsApp, que tem a própria política de privacidade. A página exibe um mapa do Google Maps; ao carregá-lo, o
+            Google recebe dados de navegação.
           </p>
           <h2>Cookies e rastreamento</h2>
           <p>Este site não usa cookies de publicidade, pixels de rastreamento nem gravação de sessão.</p>

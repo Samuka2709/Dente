@@ -1,4 +1,4 @@
-import { Clock, MapPin, MessageCircle, ShieldCheck } from 'lucide-react';
+import { Clock, MapPin, MessageCircle, ShieldCheck, Star } from 'lucide-react';
 import { clinic } from '../config/clinic';
 import { images } from '../config/images';
 import { hoursSummary, shortAddress, whatsappUrl } from '../lib/clinic-utils';
@@ -63,6 +63,17 @@ export function Hero() {
                 <Ph>{hoursSummary()}</Ph>
               </span>
             </li>
+            {clinic.testimonials.length > 0 && (
+              <li className="flex items-start gap-2.5">
+                <Star aria-hidden size={18} strokeWidth={0} fill="currentColor" className="mt-1 shrink-0 text-green" />
+                <a
+                  href="#depoimentos"
+                  className="underline decoration-taupe underline-offset-4 hover:decoration-current"
+                >
+                  Nota {clinic.googleRating.score} no Google · {clinic.googleRating.count} avaliações
+                </a>
+              </li>
+            )}
           </ul>
         </div>
 

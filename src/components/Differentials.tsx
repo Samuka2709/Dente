@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { clinic, type IconName } from '../config/clinic';
 import { Ph } from './Ph';
+import { GoogleRatingBadge, ReviewsMarquee } from './ReviewsMarquee';
 
 const icons: Record<IconName, LucideIcon> = {
   clock: Clock,
@@ -35,13 +36,20 @@ export function Differentials() {
   return (
     <section aria-labelledby="diff-title" className="on-dark bg-green py-20 text-bg md:py-28">
       <div className="container-x">
-        <div className="max-w-2xl">
-          <p className="eyebrow" data-reveal>
-            Diferenciais
-          </p>
-          <h2 id="diff-title" className="h2 mt-4 text-bg" data-reveal>
-            {clinic.content.differentialsTitle}
-          </h2>
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="eyebrow" data-reveal>
+              Avaliações
+            </p>
+            <h2 id="diff-title" className="h2 mt-4 text-bg" data-reveal>
+              {clinic.content.differentialsTitle}
+            </h2>
+          </div>
+          {clinic.testimonials.length > 0 && (
+            <div data-reveal>
+              <GoogleRatingBadge />
+            </div>
+          )}
         </div>
         <ul
           className={`mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 ${
@@ -65,6 +73,7 @@ export function Differentials() {
           })}
         </ul>
       </div>
+      <ReviewsMarquee />
     </section>
   );
 }
