@@ -83,7 +83,7 @@ export const clinic = {
 
   phone: '(73) 3000-0000', // DEMO
   /** Só números, com DDI 55. Vazio = abre o WhatsApp para escolher o contato. */
-  whatsapp: '', // DEMO
+  whatsapp: '5573998258544', // DEMO — número do Samuel para teste; trocar pelo da clínica
   whatsappMessage: 'Olá, vim pelo site e gostaria de agendar uma consulta.',
 
   address: {
