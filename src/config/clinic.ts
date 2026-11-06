@@ -353,7 +353,7 @@ export const clinic = {
 
     treatmentsTitle: 'Tratamentos',
     treatmentsIntro: 'O que o consultório oferece. Toque em um tratamento para ver os detalhes.',
-    differentialsTitle: 'Quem vem, aprova',
+    differentialsTitle: 'Atendimento que se recomenda',
     teamTitle: 'Quem vai atender você',
     galleryTitle: 'O consultório',
 
