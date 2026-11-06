@@ -34,8 +34,8 @@ const icons: Record<IconName, LucideIcon> = {
 export function Differentials() {
   return (
     <section aria-labelledby="diff-title" className="on-dark bg-green py-20 text-bg md:py-28">
-      <div className="container-x grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-4">
+      <div className="container-x">
+        <div className="max-w-2xl">
           <p className="eyebrow" data-reveal>
             Diferenciais
           </p>
@@ -43,13 +43,18 @@ export function Differentials() {
             {clinic.content.differentialsTitle}
           </h2>
         </div>
-        <ul className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:col-span-7 lg:col-start-6" data-stagger>
+        <ul
+          className={`mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 ${
+            clinic.differentials.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
+          }`}
+          data-stagger
+        >
           {clinic.differentials.map((d, i) => {
             const Icon = icons[d.icon] ?? Sparkles;
             return (
               <li key={i} data-card className="border-t border-bg/20 pt-6">
-                <Icon aria-hidden size={26} strokeWidth={1.5} className="text-sand" />
-                <h3 className="mt-5 text-[1.7rem] text-bg">
+                <Icon aria-hidden size={26} strokeWidth={1.75} className="text-sand" />
+                <h3 className="mt-5 text-[1.85rem] text-bg">
                   <Ph>{d.title}</Ph>
                 </h3>
                 <p className="mt-2 text-[1rem] text-sand">

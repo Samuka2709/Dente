@@ -87,7 +87,7 @@ export function Header() {
           </a>
 
           <nav aria-label="Principal" className="hidden lg:block">
-            <ul className="flex items-center gap-5 text-[0.95rem] font-medium xl:gap-7">
+            <ul className="flex items-center gap-5 text-[1rem] font-medium xl:gap-7">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a href={item.href} className="nav-link py-2 text-ink/85 transition-colors hover:text-green">
@@ -101,7 +101,7 @@ export function Header() {
           <div className="hidden items-center gap-5 lg:flex">
             <a
               href={phoneUrl()}
-              className="hidden min-h-11 items-center gap-2 text-[0.95rem] font-semibold text-green xl:flex"
+              className="hidden min-h-11 items-center gap-2 text-[1rem] font-semibold text-green xl:flex"
             >
               <Phone aria-hidden size={17} strokeWidth={1.75} />
               <Ph>{clinic.phone}</Ph>

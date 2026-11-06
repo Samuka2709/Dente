@@ -5,7 +5,7 @@ import { Ph } from './Ph';
 /** Acordeão com <details>/<summary>: acessível por teclado e leitor de tela, e funciona sem JavaScript */
 export function FAQ() {
   return (
-    <section id="duvidas" aria-labelledby="faq-title" className="bg-sand/45 py-20 md:py-32">
+    <section id="duvidas" aria-labelledby="faq-title" className="bg-sand-soft py-20 md:py-32">
       <div className="container-x grid gap-10 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <p className="eyebrow" data-reveal>
@@ -25,7 +25,7 @@ export function FAQ() {
                 <Plus
                   aria-hidden
                   size={22}
-                  strokeWidth={1.5}
+                  strokeWidth={1.75}
                   className="shrink-0 text-green transition-transform duration-200 group-open:rotate-45"
                 />
               </summary>

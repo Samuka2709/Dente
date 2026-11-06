@@ -19,7 +19,7 @@ function MapEmbed() {
         />
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
-          <MapPin aria-hidden size={30} strokeWidth={1.5} className="text-sand" />
+          <MapPin aria-hidden size={30} strokeWidth={1.75} className="text-sand" />
           <button type="button" onClick={() => setLoad(true)} className="btn btn-outline-light">
             Carregar mapa
           </button>
@@ -54,7 +54,7 @@ function ContactForm() {
   if (sent) {
     return (
       <div role="status" className="rounded-[14px] border border-bg/25 p-7 md:p-9">
-        <CheckCircle2 aria-hidden size={30} strokeWidth={1.5} className="text-sand" />
+        <CheckCircle2 aria-hidden size={30} strokeWidth={1.75} className="text-sand" />
         <h3 className="mt-4 text-[2rem] text-bg">Quase lá</h3>
         <p className="mt-3 text-sand">
           Abrimos o WhatsApp com seus dados preenchidos. Envie a mensagem para a equipe confirmar o dia e o horário da
@@ -185,7 +185,7 @@ export function Contact() {
 
           <ul className="mt-10 grid gap-6 text-[1rem]" data-reveal>
             <li className="flex gap-4">
-              <Phone aria-hidden size={20} strokeWidth={1.6} className="mt-1 shrink-0 text-sand" />
+              <Phone aria-hidden size={20} strokeWidth={1.75} className="mt-1 shrink-0 text-sand" />
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.12em] text-sand">Telefone</p>
                 <a
@@ -197,7 +197,7 @@ export function Contact() {
               </div>
             </li>
             <li className="flex gap-4">
-              <MapPin aria-hidden size={20} strokeWidth={1.6} className="mt-1 shrink-0 text-sand" />
+              <MapPin aria-hidden size={20} strokeWidth={1.75} className="mt-1 shrink-0 text-sand" />
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.12em] text-sand">Endereço</p>
                 <address className="mt-1 not-italic">
@@ -214,7 +214,7 @@ export function Contact() {
               </div>
             </li>
             <li className="flex gap-4">
-              <Clock aria-hidden size={20} strokeWidth={1.6} className="mt-1 shrink-0 text-sand" />
+              <Clock aria-hidden size={20} strokeWidth={1.75} className="mt-1 shrink-0 text-sand" />
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.12em] text-sand">Horários</p>
                 <dl className="mt-1 grid gap-1">

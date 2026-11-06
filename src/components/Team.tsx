@@ -6,7 +6,7 @@ import { Ph } from './Ph';
 
 export function Team() {
   return (
-    <section id="equipe" aria-labelledby="team-title" className="bg-sand/45 py-20 md:py-32">
+    <section id="equipe" aria-labelledby="team-title" className="bg-sand-soft py-20 md:py-32">
       <div className="container-x">
         <div className="max-w-2xl">
           <p className="eyebrow" data-reveal>
@@ -32,7 +32,7 @@ export function Team() {
                     />
                   ) : (
                     <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-3 text-green/70">
-                      <UserRound aria-hidden size={48} strokeWidth={1.25} />
+                      <UserRound aria-hidden size={48} strokeWidth={1.75} />
                       <span className="ph text-sm text-ink">[FOTO DO PROFISSIONAL]</span>
                     </div>
                   )}

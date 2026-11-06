@@ -26,7 +26,7 @@ export function Hero() {
           <p
             data-hero-item
             style={{ animationDelay: '290ms' }}
-            className="mt-5 max-w-[34ch] text-[1.125rem] text-muted md:text-[1.2rem]"
+            className="mt-5 max-w-[34ch] text-[1.15rem] text-muted md:text-[1.3rem]"
           >
             <Ph>{c.heroSubtitle}</Ph>
           </p>
@@ -49,7 +49,7 @@ export function Hero() {
           <ul
             data-hero-item
             style={{ animationDelay: '530ms' }}
-            className="mt-6 grid gap-2 border-t border-taupe/40 pt-5 md:mt-8 md:pt-6 text-[0.95rem] text-muted"
+            className="mt-6 grid gap-2 border-t border-taupe/40 pt-5 md:mt-8 md:pt-6 text-[1rem] text-muted"
           >
             <li className="flex items-start gap-2.5">
               <MapPin aria-hidden size={18} strokeWidth={1.75} className="mt-1 shrink-0 text-green" />
@@ -66,7 +66,7 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative lg:col-span-7 lg:-mr-[max(2.5rem,calc((100vw-82rem)/2+2.5rem))]">
+        <div className="relative lg:col-span-7 lg:-mr-[max(2.5rem,calc((100vw-84rem)/2+2.5rem))]">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[14px] sm:aspect-[16/12] lg:aspect-auto lg:h-[min(82vh,52rem)] lg:rounded-r-none">
             <div data-hero-zoom className="absolute inset-0">
               <Img
@@ -88,7 +88,7 @@ export function Hero() {
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-green text-bg">
               <ShieldCheck aria-hidden size={20} strokeWidth={1.75} />
             </span>
-            <span className="text-[0.9rem] leading-snug">
+            <span className="text-[0.95rem] leading-snug">
               <span className="block text-muted">Responsabilidade técnica</span>
               <span className="block font-semibold text-ink">
                 <Ph>{clinic.responsible.name}</Ph>

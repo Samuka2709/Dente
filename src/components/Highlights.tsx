@@ -20,7 +20,7 @@ export function Highlights() {
             key={h.id}
             id={h.id}
             aria-labelledby={`${h.id}-title`}
-            className={`py-20 md:py-28 ${flip ? 'bg-sand/45' : ''}`}
+            className={`py-20 md:py-28 ${flip ? 'bg-sand-soft' : ''}`}
           >
             <div className="container-x grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
               <div className={`lg:col-span-6 ${flip ? 'lg:order-2 lg:col-start-7' : ''}`}>
