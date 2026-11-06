@@ -330,6 +330,9 @@ export const clinic = {
     { author: 'Adriane S.', source: 'Google', text: 'O melhor da região! Atendimento sem igual.' },
     { author: 'Carolina N.', source: 'Google', text: 'Profissional maravilhoso!!!!' },
     { author: 'Marcel C.', source: 'Google', text: 'Excelente profissional!' },
+    // Avaliações só com estrelas, sem comentário
+    { author: 'Nilla C.', source: 'Google', text: '' },
+    { author: 'Rafael R.', source: 'Google', text: '' },
   ] as Testimonial[],
 
   hasBeforeAfter: false,
