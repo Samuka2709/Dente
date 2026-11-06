@@ -90,19 +90,28 @@ export const clinic = {
   whatsappMessage: 'Olá, vim pelo site e gostaria de agendar uma avaliação.',
 
   address: {
-    street: 'Praça Rui Barbosa, 184',
+    street: 'Praça Rui Barbosa, 185', // Google Maps diz 185; o Instagram diz 184 — confirmar
     complement: '1º andar',
     neighborhood: 'Centro',
     city: 'Ilhéus',
     state: 'BA',
-    zip: '[CEP]',
+    zip: '45653-340',
   },
   /** Link do perfil no Google Maps (informado pelo cliente) */
   mapsUrl: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6',
   /** Coordenadas do perfil no Google Maps — usadas no mapa incorporado */
   geo: { lat: -14.7963921, lng: -39.0325573 },
 
-  hours: [{ label: '[DIAS DE ATENDIMENTO]', time: '[HORÁRIO]', days: [], opens: '', closes: '' }] as OpeningHours[],
+  hours: [
+    {
+      label: 'Segunda a sexta',
+      time: '8h às 18h',
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+    { label: 'Sábado', time: '8h às 12h', days: ['Saturday'], opens: '08:00', closes: '12:00' },
+  ] as OpeningHours[],
 
   social: [{ label: 'Instagram', handle: '@dr_leonardonetto', url: 'https://www.instagram.com/dr_leonardonetto/' }],
 
