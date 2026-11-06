@@ -29,12 +29,15 @@ function ContactForm() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const msg = [
-      clinic.whatsappMessage,
+      clinic.whatsappGreeting,
+      'Gostaria de agendar uma avaliação. Seguem meus dados:',
       '',
-      `Nome: ${data.get('nome')}`,
-      `Telefone: ${data.get('telefone')}`,
-      `Melhor horário: ${data.get('horario')}`,
-      `Motivo: ${data.get('motivo')}`,
+      `*Nome:* ${data.get('nome')}`,
+      `*Telefone:* ${data.get('telefone')}`,
+      `*Melhor horário:* ${data.get('horario')}`,
+      `*Motivo:* ${data.get('motivo')}`,
+      '',
+      'Aguardo o retorno. Obrigado(a)!',
     ].join('\n');
     // Sem backend: monta a mensagem e abre o WhatsApp com os dados preenchidos
     window.open(whatsappUrl(msg), '_blank', 'noopener');

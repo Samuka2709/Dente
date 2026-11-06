@@ -50,7 +50,7 @@ export function Highlights() {
                 </div>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal>
                   <a
-                    href={whatsappUrl(`${clinic.whatsappMessage} Tenho interesse em ${h.interest}.`)}
+                    href={whatsappUrl(`${clinic.whatsappGreeting} Tenho interesse em ${h.interest} e gostaria de agendar uma avaliação.`)}
                     target="_blank"
                     rel="noopener"
                     className="btn btn-primary"

@@ -20,7 +20,7 @@ function AskCta({ className = '' }: { className?: string }) {
         <p className="mt-1 text-muted">Agende uma avaliação: o plano de tratamento é definido depois do exame.</p>
       </div>
       <a
-        href={whatsappUrl(`${clinic.whatsappMessage} Gostaria de agendar uma avaliação.`)}
+        href={whatsappUrl()}
         target="_blank"
         rel="noopener"
         className="btn btn-primary shrink-0 self-start"
@@ -163,7 +163,7 @@ export function Treatments() {
             </div>
             <p className="mt-6 text-sm text-muted">A indicação de cada tratamento depende de avaliação clínica.</p>
             <a
-              href={whatsappUrl(`${clinic.whatsappMessage} Tenho interesse em: ${active.name}.`)}
+              href={whatsappUrl(`${clinic.whatsappGreeting} Tenho interesse em ${active.name.toLowerCase()} e gostaria de agendar uma avaliação.`)}
               target="_blank"
               rel="noopener"
               className="btn btn-primary mt-7 w-full sm:w-auto"

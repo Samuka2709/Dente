@@ -87,7 +87,8 @@ export const clinic = {
    */
   phone: '(73) 99825-8544',
   whatsapp: '5573998258544',
-  whatsappMessage: 'Olá, vim pelo site e gostaria de agendar uma avaliação.',
+  whatsappGreeting: 'Olá, Dr. Leonardo! Tudo bem?',
+  whatsappMessage: 'Olá, Dr. Leonardo! Tudo bem? Gostaria de agendar uma avaliação.',
 
   address: {
     street: 'Praça Rui Barbosa, 185', // Google Maps diz 185; o Instagram diz 184 — confirmar
