@@ -25,6 +25,12 @@ export const fullAddress = () => {
     .join(', ');
 };
 
+/** Endereço para a primeira dobra: rua, número, complemento, bairro e cidade */
+export const streetAddress = () => {
+  const a = clinic.address;
+  return `${a.street}${a.complement ? `, ${a.complement}` : ''} – ${a.neighborhood}, ${a.city}`;
+};
+
 export const shortAddress = () => `${clinic.address.neighborhood}, ${clinic.address.city}`;
 
 /** Link do Maps. Enquanto pendente, busca pelo endereço. */

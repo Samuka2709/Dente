@@ -1,7 +1,7 @@
 import { Clock, MapPin, MessageCircle, ShieldCheck, Star } from 'lucide-react';
 import { clinic } from '../config/clinic';
 import { images } from '../config/images';
-import { hoursSummary, shortAddress, whatsappUrl } from '../lib/clinic-utils';
+import { hoursSummary, mapsUrl, streetAddress, whatsappUrl } from '../lib/clinic-utils';
 import { heroSizes, heroWidths } from '../lib/img';
 import { Img } from './Img';
 import { Ph } from './Ph';
@@ -53,9 +53,14 @@ export function Hero() {
           >
             <li className="flex items-start gap-2.5">
               <MapPin aria-hidden size={18} strokeWidth={1.75} className="mt-1 shrink-0 text-green" />
-              <span>
-                <Ph>{shortAddress()}</Ph>
-              </span>
+              <a
+                href={mapsUrl()}
+                target="_blank"
+                rel="noopener"
+                className="underline decoration-taupe underline-offset-4 hover:decoration-current"
+              >
+                <Ph>{streetAddress()}</Ph>
+              </a>
             </li>
             <li className="flex items-start gap-2.5">
               <Clock aria-hidden size={18} strokeWidth={1.75} className="mt-1 shrink-0 text-green" />
