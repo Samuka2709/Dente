@@ -29,21 +29,38 @@ export const images = {
     alt: 'Consultório odontológico com parede de pedra, luz natural e paciente em atendimento',
     provisional: true,
   },
-  // PROVISÓRIA — dentista explicando um exame à paciente
+  // PROVISÓRIA — trocar por uma foto do Dr. Leonardo no consultório
   about: {
-    unsplash: '1606811841689-23dfddce3e95',
+    unsplash: '1519710164239-da123dc03ef4',
     width: 1000,
     height: 1250,
-    alt: 'Dentista mostrando um exame de imagem à paciente na cadeira',
+    alt: 'Ambiente claro com mesa, cadeira e plantas',
     provisional: true,
+  },
+  /** Fotos das seções de destaque (Lentes, Implantes) — PROVISÓRIAS */
+  highlights: {
+    lentes: {
+      unsplash: '1667133295315-820bb6481730',
+      width: 1300,
+      height: 1040,
+      alt: 'Paciente sorrindo durante o atendimento odontológico',
+      provisional: true,
+    },
+    implantes: {
+      unsplash: '1600170311833-c2cf5280ce49',
+      width: 1300,
+      height: 1040,
+      alt: 'Exame de imagem da arcada dentária em um tablet',
+      provisional: true,
+    },
   },
   gallery: [
     // PROVISÓRIA
     {
-      unsplash: '1519710164239-da123dc03ef4',
+      unsplash: '1616391182219-e080b4d1043a',
       width: 1400,
       height: 1000,
-      alt: 'Ambiente claro com mesa, cadeira e plantas',
+      alt: 'Consultório com cadeira odontológica e bancada',
       provisional: true,
     },
     // PROVISÓRIA
@@ -56,10 +73,10 @@ export const images = {
     },
     // PROVISÓRIA
     {
-      unsplash: '1667133295315-820bb6481730',
+      unsplash: '1606265752439-1f18756aa5fc',
       width: 1000,
       height: 900,
-      alt: 'Paciente sorrindo durante o atendimento odontológico',
+      alt: 'Dentista com espelho e sonda odontológica',
       provisional: true,
     },
     // PROVISÓRIA
@@ -80,30 +97,7 @@ export const images = {
     },
   ],
   /** Fotos da equipe: a chave é o valor de `photo` em clinic.team */
-  team: {
-    // PROVISÓRIAS — fotos de banco de imagens, NÃO são os profissionais
-    helena: {
-      unsplash: '1631217868264-e5b90bb7e133',
-      width: 800,
-      height: 1000,
-      alt: 'Retrato de dentista sorrindo no consultório',
-      provisional: true,
-    },
-    rafael: {
-      unsplash: '1612349317150-e413f6a5b16d',
-      width: 800,
-      height: 1000,
-      alt: 'Retrato de dentista de jaleco branco',
-      provisional: true,
-    },
-    camila: {
-      unsplash: '1606265752439-1f18756aa5fc',
-      width: 800,
-      height: 1000,
-      alt: 'Dentista com espelho e sonda odontológica',
-      provisional: true,
-    },
-  } as Record<string, ImageSpec>,
+  team: {} as Record<string, ImageSpec>,
   /** Antes e depois: a chave é o valor de `before`/`after` em clinic.beforeAfter */
   beforeAfter: {} as Record<string, ImageSpec>,
   /** Imagem de compartilhamento (WhatsApp, redes). 1200x630. */

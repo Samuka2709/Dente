@@ -159,11 +159,11 @@ function ContactForm() {
 export function Contact() {
   const c = clinic.content;
   return (
-    <section id="contato" aria-labelledby="contact-title" className="on-dark bg-green py-20 text-bg md:py-32">
+    <section id="agende" aria-labelledby="contact-title" className="on-dark bg-green py-20 text-bg md:py-32">
       <div className="container-x grid gap-14 lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5">
           <p className="eyebrow" data-reveal>
-            Agendamento
+            {c.contactEyebrow}
           </p>
           <h2 id="contact-title" className="h2 mt-4 text-bg" data-reveal>
             {c.contactTitle}
@@ -236,7 +236,14 @@ export function Contact() {
 
         <div className="grid gap-8 lg:col-span-6 lg:col-start-7">
           <ContactForm />
-          <MapEmbed />
+          <div id="como-chegar" className="scroll-mt-24">
+            <h3 className="mb-4 text-[2rem] text-bg">Como chegar</h3>
+            <MapEmbed />
+            <a href={mapsUrl()} target="_blank" rel="noopener" className="btn btn-outline-light mt-4 w-full sm:w-auto">
+              <MapPin aria-hidden size={18} />
+              Abrir rota no Google Maps
+            </a>
+          </div>
         </div>
       </div>
     </section>

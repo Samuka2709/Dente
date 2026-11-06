@@ -4,8 +4,8 @@
  * Trocar de clínica = editar só este arquivo (e as fotos em `images.ts`).
  * Nenhum componente tem nome, telefone, endereço ou texto da clínica escrito direto.
  *
- * >>> DEMONSTRAÇÃO: os valores abaixo são FICTÍCIOS, para apresentar ao cliente.
- *     Troque tudo pelos dados reais antes de publicar (veja `demo: true`). <<<
+ * Cliente: Dr. Leonardo Netto — Ilhéus, BA. Dados informados pelo cliente/Instagram/Google.
+ * Pendências: campos entre colchetes, fotos reais e o WhatsApp oficial (veja `whatsapp`).
  *
  * Tudo o que está entre colchetes, como `[TELEFONE]`, é um MARCADOR PENDENTE:
  * aparece destacado no site até ser substituído pelo dado real.
@@ -67,216 +67,226 @@ export type OpeningHours = {
 };
 
 export const clinic = {
-  /** true = mostra o aviso "Site de demonstração" no rodapé. Troque para false ao publicar. */
+  /** true = mostra o aviso "Modelo de demonstração" no rodapé. Troque para false ao publicar. */
   demo: true,
 
-  name: 'Clínica Lumière Odontologia', // DEMO
-  specialty: 'Clínica odontológica',
-  city: 'Ilhéus', // DEMO
-  neighborhood: 'Centro', // DEMO
-  state: 'BA', // DEMO
+  name: 'Dr. Leonardo Netto',
+  specialty: 'Odontologia',
+  city: 'Ilhéus',
+  neighborhood: '[BAIRRO]',
+  state: 'BA',
 
   responsible: {
-    name: 'Dra. Helena Duarte', // DEMO — fictícia
-    cro: 'CRO-BA 00.000', // DEMO — fictício
+    name: 'Dr. Leonardo Netto',
+    cro: 'CRO-BA [NÚMERO]',
   },
 
-  phone: '(73) 3000-0000', // DEMO
-  /** Só números, com DDI 55. Vazio = abre o WhatsApp para escolher o contato. */
-  whatsapp: '5573998258544', // DEMO — número do Samuel para teste; trocar pelo da clínica
-  whatsappMessage: 'Olá, vim pelo site e gostaria de agendar uma consulta.',
+  /**
+   * TESTE: por enquanto os botões usam o número do Samuel.
+   * Para publicar, troque por: phone '(73) 99996-2912' e whatsapp '5573999962912' (WhatsApp do consultório).
+   */
+  phone: '(73) 99825-8544',
+  whatsapp: '5573998258544',
+  whatsappMessage: 'Olá, vim pelo site e gostaria de agendar uma avaliação.',
 
   address: {
-    street: 'Rua das Acácias, 120', // DEMO — endereço fictício
-    complement: 'Sala 4',
-    neighborhood: 'Centro',
+    street: '[RUA E NÚMERO]',
+    complement: '',
+    neighborhood: '[BAIRRO]',
     city: 'Ilhéus',
     state: 'BA',
-    zip: '45650-000',
+    zip: '[CEP]',
   },
-  mapsUrl: '', // DEMO — vazio = busca pelo endereço
+  /** Link do perfil no Google Maps (informado pelo cliente) */
+  mapsUrl: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6',
+  /** Coordenadas do perfil no Google Maps — usadas no mapa incorporado */
+  geo: { lat: -14.7963921, lng: -39.0325573 },
 
-  hours: [
-    {
-      label: 'Segunda a sexta',
-      time: '8h às 19h',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '19:00',
-    },
-    { label: 'Sábado', time: '8h às 12h', days: ['Saturday'], opens: '08:00', closes: '12:00' },
-  ] as OpeningHours[],
+  hours: [{ label: '[DIAS DE ATENDIMENTO]', time: '[HORÁRIO]', days: [], opens: '', closes: '' }] as OpeningHours[],
 
-  social: [{ label: 'Instagram', handle: '@lumiere.odonto', url: 'https://www.instagram.com/' }], // DEMO
+  social: [{ label: 'Instagram', handle: '@dr_leonardonetto', url: 'https://www.instagram.com/dr_leonardonetto/' }],
 
-  insurance: 'Atendimento particular, com reembolso para os principais planos', // DEMO
+  insurance: '[CONVÊNIOS ACEITOS OU "PARTICULAR"]',
 
   logo: null as string | null,
-  audience: 'Adultos e famílias',
+  audience: 'Adultos de Ilhéus e região',
   tone: 'acolhedor e sofisticado',
   siteUrl: '',
-  privacyEmail: 'privacidade@exemplo.com.br', // DEMO
+  privacyEmail: '[E-MAIL PARA PRIVACIDADE]',
 
+  /** Menu: segue os destaques do Instagram do consultório */
+  nav: [
+    { href: '#sobre', label: 'Sobre' },
+    { href: '#tratamentos', label: 'Tratamentos' },
+    { href: '#lentes', label: 'Lentes' },
+    { href: '#implantes', label: 'Implantes' },
+    { href: '#consultorio', label: 'Consultório' },
+    { href: '#duvidas', label: 'Dúvidas' },
+    { href: '#como-chegar', label: 'Como chegar' },
+  ],
+
+  /* Serviços divulgados pelo consultório (Instagram e perfil do Google) */
   treatments: [
     {
-      id: 'clinico-geral',
-      name: 'Clínico geral',
-      category: 'Prevenção',
-      summary: 'Consulta de avaliação, limpeza, restaurações e acompanhamento da saúde da boca.',
-      details: [
-        'A consulta começa por uma conversa sobre seu histórico e suas queixas, seguida de exame clínico completo.',
-        'Inclui limpeza profissional, aplicação de flúor quando indicada e restaurações em resina da cor do dente.',
-      ],
-    },
-    {
-      id: 'implantes',
-      name: 'Implantes dentários',
+      id: 'implante-protese',
+      name: 'Implante e prótese',
       category: 'Reabilitação',
-      summary: 'Reposição de dentes perdidos com implantes, planejada a partir de exames de imagem.',
+      summary: 'Reposição de dentes perdidos com implantes e próteses, planejada a partir de exames.',
       details: [
-        'O planejamento usa tomografia para avaliar o osso e definir a posição do implante.',
-        'O tempo de tratamento varia conforme cada caso e é explicado na avaliação.',
+        'O implante substitui a raiz do dente perdido; a prótese devolve a parte visível e a mastigação.',
+        'O planejamento e o tempo de tratamento dependem de cada caso e são explicados na avaliação.',
       ],
     },
     {
-      id: 'ortodontia',
-      name: 'Ortodontia e alinhadores',
-      category: 'Ortodontia',
-      summary: 'Aparelho fixo ou alinhadores transparentes para corrigir a posição dos dentes.',
+      id: 'canal',
+      name: 'Tratamento de canal',
+      category: 'Endodontia',
+      summary: 'Tratamento endodôntico para aliviar a dor e preservar o dente natural.',
       details: [
-        'Depois da documentação ortodôntica, o profissional indica o tipo de aparelho mais adequado.',
-        'Atendemos adolescentes e adultos, com consultas de manutenção periódicas.',
+        'Indicado quando a polpa do dente está inflamada ou infectada.',
+        'Feito com anestesia local. Em caso de dor, fale com o consultório pelo WhatsApp.',
       ],
     },
     {
       id: 'clareamento',
       name: 'Clareamento dental',
       category: 'Estética',
-      summary: 'Clareamento em consultório ou caseiro supervisionado, após avaliação.',
+      summary: 'Clareamento dos dentes com acompanhamento profissional, após avaliação.',
       details: [
-        'Antes de clarear, verificamos se há cáries, restaurações ou sensibilidade que precisem de cuidado.',
+        'Antes de clarear, o dentista verifica se há cáries, restaurações ou sensibilidade que precisem de cuidado.',
         'O resultado varia de pessoa para pessoa.',
       ],
     },
     {
-      id: 'facetas',
-      name: 'Facetas e lentes de contato',
+      id: 'lentes-de-contato',
+      name: 'Lentes de contato dental',
       category: 'Estética',
-      summary: 'Lâminas de porcelana ou resina para ajustar forma e cor dos dentes.',
+      summary: 'Lâminas finas que ajustam cor, forma e tamanho dos dentes.',
       details: [
-        'O planejamento inclui fotos e um ensaio do sorriso antes de qualquer desgaste.',
-        'Nem todo caso é indicado para facetas: isso é definido na avaliação.',
+        'O planejamento começa pela avaliação e pelo estudo do sorriso.',
+        'Nem todo caso é indicado para lentes: isso é definido na consulta.',
       ],
     },
     {
-      id: 'endodontia',
-      name: 'Tratamento de canal',
-      category: 'Reabilitação',
-      summary: 'Tratamento da polpa do dente para aliviar a dor e preservar o dente natural.',
-      details: [
-        'Feito com anestesia local e, sempre que possível, em uma ou duas sessões.',
-        'Em caso de dor, entre em contato pelo WhatsApp para verificarmos um horário.',
-      ],
+      id: 'resinas',
+      name: 'Restaurações em resina',
+      category: 'Dentística',
+      summary: 'Restaurações e ajustes estéticos com resina da cor do dente.',
+      details: ['Usadas para tratar cáries, fechar pequenos espaços e corrigir fraturas.'],
     },
   ] as Treatment[],
 
+  /* Destaques com seção própria (destaques do Instagram) */
+  highlights: [
+    {
+      id: 'lentes',
+      eyebrow: 'Lentes de contato dental',
+      title: 'Lentes planejadas para o seu sorriso',
+      text: [
+        'As lentes de contato dental são lâminas finas, coladas sobre a frente dos dentes, que ajustam cor, forma e proporção.',
+        'Tudo começa pela avaliação: o Dr. Leonardo examina os dentes e a gengiva e explica se as lentes são indicadas no seu caso.',
+      ],
+      image: 'lentes',
+      interest: 'lentes de contato dental',
+    },
+    {
+      id: 'implantes',
+      eyebrow: 'Implante e prótese',
+      title: 'Voltar a mastigar e sorrir com segurança',
+      text: [
+        'O implante substitui a raiz do dente perdido e recebe a prótese, que devolve a parte visível e a mastigação.',
+        'O planejamento é feito a partir de exames de imagem, e cada etapa é explicada antes de começar.',
+      ],
+      image: 'implantes',
+      interest: 'implante e prótese',
+    },
+  ],
+
   differentials: [
-    { icon: 'calendar-check', title: 'Horário pontual', text: 'Agenda organizada para você não esperar na recepção.' },
-    { icon: 'scan', title: 'Exames no consultório', text: 'Radiografia digital feita na própria clínica.' },
+    { icon: 'calendar-check', title: 'Avaliação sem custo', text: 'A primeira avaliação não é cobrada.' },
     {
       icon: 'heart-handshake',
-      title: 'Plano explicado',
-      text: 'Você recebe o plano de tratamento por escrito, com as etapas.',
+      title: 'Agende pelo WhatsApp',
+      text: 'Fale direto com o consultório para marcar seu horário.',
     },
-    { icon: 'map-pin', title: 'No Centro', text: 'Fácil de chegar, perto do comércio e dos pontos de ônibus.' },
+    {
+      icon: 'map-pin',
+      title: 'Em Ilhéus',
+      text: 'Consultório com localização no Google Maps para facilitar a chegada.',
+    },
   ] as { icon: IconName; title: string; text: string }[],
 
   team: [
     {
-      name: 'Dra. Helena Duarte', // DEMO — fictícia
-      cro: 'CRO-BA 00.000',
-      specialty: 'Implantodontia',
-      bio: 'Responsável técnica da clínica. Atua em reabilitação oral e implantes.',
-      photo: 'helena',
-    },
-    {
-      name: 'Dr. Rafael Moreira', // DEMO — fictício
-      cro: 'CRO-BA 00.001',
-      specialty: 'Ortodontia',
-      bio: 'Atende adolescentes e adultos com aparelhos fixos e alinhadores.',
-      photo: 'rafael',
-    },
-    {
-      name: 'Dra. Camila Nogueira', // DEMO — fictícia
-      cro: 'CRO-BA 00.002',
-      specialty: 'Dentística e estética',
-      bio: 'Cuida de restaurações, clareamento e facetas.',
-      photo: 'camila',
+      name: 'Dr. Leonardo Netto',
+      cro: 'CRO-BA [NÚMERO]',
+      specialty: 'Cirurgião-dentista',
+      bio: 'Implantes e próteses, tratamento de canal, clareamento e lentes de contato dental.',
+      photo: null,
     },
   ] as Professional[],
 
-  /* Depoimentos: só reais e autorizados. Vazio = a seção não aparece. */
   testimonials: [] as Testimonial[],
 
   hasBeforeAfter: false,
   beforeAfter: [] as { treatment: string; before: string; after: string }[],
 
   content: {
-    heroEyebrow: 'Centro · Ilhéus, BA',
-    heroTitle: 'Odontologia no coração de Ilhéus',
-    heroSubtitle: 'Clínico geral, implantes, ortodontia e estética, com consultas sem pressa.',
+    heroEyebrow: 'Dentista em Ilhéus · BA',
+    heroTitle: 'Implantes, lentes e canal em Ilhéus',
+    heroSubtitle: 'Consultório do Dr. Leonardo Netto. A primeira avaliação não é cobrada.',
 
-    aboutTitle: 'Um consultório para ser atendido sem pressa',
+    aboutEyebrow: 'Sobre o Dr. Leonardo',
+    aboutTitle: 'Atendimento próximo, do diagnóstico ao resultado',
     aboutParagraphs: [
-      'A Clínica Lumière fica no Centro de Ilhéus. Atendemos adultos e famílias, da prevenção à reabilitação.',
-      'A primeira consulta começa por uma conversa. Depois do exame, explicamos o que encontramos e as opções de tratamento, com as etapas por escrito.',
-      'O espaço tem salas com luz natural e radiografia digital no próprio consultório.',
+      'O Dr. Leonardo Netto é cirurgião-dentista em Ilhéus, na Bahia. No consultório, atende implantes e próteses, tratamento de canal, clareamento, restaurações em resina e lentes de contato dental.',
+      'Tudo começa pela avaliação, que não é cobrada: é o momento de examinar, conversar sobre o que incomoda e entender as opções de tratamento.',
+      '[FORMAÇÃO E TRAJETÓRIA DO DR. LEONARDO — A CONFIRMAR COM ELE]',
     ],
 
     treatmentsTitle: 'Tratamentos',
-    treatmentsIntro: 'O que fazemos no consultório. Toque em um tratamento para ver os detalhes.',
+    treatmentsIntro: 'O que o consultório oferece. Toque em um tratamento para ver os detalhes.',
     differentialsTitle: 'Por que agendar aqui',
     teamTitle: 'Quem vai atender você',
-    galleryTitle: 'Conheça o espaço',
+    galleryTitle: 'O consultório',
 
-    faqTitle: 'Perguntas frequentes',
+    faqTitle: 'Dúvidas frequentes',
     faq: [
-      {
-        q: 'Como funciona a primeira consulta?',
-        a: 'Dura cerca de 40 minutos. Conversamos sobre seu histórico, fazemos o exame clínico e, se necessário, radiografias. No fim, você recebe o plano de tratamento.',
-      },
+      { q: 'A avaliação é cobrada?', a: 'Não. A primeira avaliação não é cobrada.' },
       {
         q: 'Vocês atendem convênio?',
-        a: 'O atendimento é particular. Emitimos a documentação para você pedir reembolso ao seu plano.',
+        a: '[RESPOSTA A CONFIRMAR PELO CONSULTÓRIO: convênios aceitos ou "atendimento particular".]',
       },
       {
         q: 'Quais são as formas de pagamento?',
-        a: 'Pix, cartão de débito e cartão de crédito. As condições são apresentadas junto com o plano de tratamento.',
+        a: '[RESPOSTA A CONFIRMAR PELO CONSULTÓRIO: formas e condições de pagamento.]',
       },
       {
-        q: 'Vocês atendem urgências?',
-        a: 'Em caso de dor, fale com a gente pelo WhatsApp. Reservamos horários na agenda para encaixes no mesmo dia, sempre que possível.',
+        q: 'Estou com dor. Vocês atendem urgência?',
+        a: 'Fale com o consultório pelo WhatsApp e explique o que está sentindo. [CONFIRMAR COMO FUNCIONAM OS ENCAIXES.]',
       },
       {
-        q: 'Tem estacionamento?',
-        a: 'Há estacionamento conveniado na mesma rua. A clínica fica no Centro, perto dos pontos de ônibus.',
+        q: 'Quem é candidato a lentes de contato dental?',
+        a: 'Depende da saúde dos dentes e da gengiva e do resultado que você procura. A indicação é feita na avaliação.',
       },
       {
         q: 'Como faço para agendar?',
-        a: 'Pelo WhatsApp, por telefone ou pelo formulário no fim desta página. A equipe responde para confirmar dia e horário.',
+        a: 'Pelo WhatsApp ou pelo formulário no fim desta página. O consultório responde para confirmar dia e horário.',
       },
     ],
 
-    contactTitle: 'Agende sua consulta',
-    contactIntro: 'Fale com a equipe pelo WhatsApp ou deixe seus dados que entramos em contato.',
+    contactEyebrow: 'Agende',
+    contactTitle: 'Agende sua avaliação',
+    contactIntro: 'Fale com o consultório pelo WhatsApp ou deixe seus dados que entramos em contato.',
     formTimes: ['Manhã', 'Tarde', 'Qualquer horário'],
     formReasons: [
-      'Avaliação / primeira consulta',
-      'Dor ou urgência',
-      'Limpeza e prevenção',
-      'Implantes',
-      'Ortodontia / alinhadores',
-      'Estética (clareamento, facetas)',
+      'Avaliação',
+      'Dor ou incômodo',
+      'Implante e prótese',
+      'Tratamento de canal',
+      'Clareamento',
+      'Lentes de contato dental',
+      'Restaurações em resina',
       'Outro assunto',
     ],
   },

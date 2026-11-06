@@ -12,9 +12,30 @@ function groupTreatments(list: Treatment[]) {
   return [...map.entries()].map(([category, items]) => ({ category, items }));
 }
 
+function AskCta({ className = '' }: { className?: string }) {
+  return (
+    <div className={`flex flex-col gap-5 rounded-[14px] border border-taupe/40 p-7 md:p-8 ${className}`} data-reveal>
+      <div>
+        <p className="font-serif text-[1.7rem] leading-tight text-green">Não sabe por onde começar?</p>
+        <p className="mt-1 text-muted">Agende uma avaliação: o plano de tratamento é definido depois do exame.</p>
+      </div>
+      <a
+        href={whatsappUrl(`${clinic.whatsappMessage} Gostaria de agendar uma avaliação.`)}
+        target="_blank"
+        rel="noopener"
+        className="btn btn-primary shrink-0 self-start"
+      >
+        <MessageCircle aria-hidden size={19} />
+        Agendar avaliação
+      </a>
+    </div>
+  );
+}
+
 export function Treatments() {
   const c = clinic.content;
   const groups = groupTreatments(clinic.treatments);
+  const inGrid = groups.length === 1 && groups[0].items.length % 3 === 2;
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [active, setActive] = useState<Treatment | null>(null);
 
@@ -91,28 +112,20 @@ export function Treatments() {
                   </details>
                 </li>
               ))}
+              {inGrid && group === groups[groups.length - 1] && (
+                <li className="hidden lg:flex">
+                  <AskCta className="h-full w-full justify-between bg-green/[0.04]" />
+                </li>
+              )}
             </ul>
+            {inGrid && group === groups[groups.length - 1] && (
+              <AskCta className="mt-5 sm:flex-row sm:items-center sm:justify-between lg:hidden" />
+            )}
           </div>
         ))}
 
-        <div
-          className="mt-12 flex flex-col gap-5 rounded-[14px] border border-taupe/40 p-7 sm:flex-row sm:items-center sm:justify-between md:p-8"
-          data-reveal
-        >
-          <div>
-            <p className="font-serif text-[1.7rem] leading-tight text-green">Não sabe por onde começar?</p>
-            <p className="mt-1 text-muted">Agende uma avaliação: o plano de tratamento é definido depois do exame.</p>
-          </div>
-          <a
-            href={whatsappUrl(`${clinic.whatsappMessage} Gostaria de agendar uma avaliação.`)}
-            target="_blank"
-            rel="noopener"
-            className="btn btn-primary shrink-0"
-          >
-            <MessageCircle aria-hidden size={19} />
-            Agendar avaliação
-          </a>
-        </div>
+        {/* Com 5 ou 8 tratamentos, a chamada ocupa a vaga livre do grid no desktop */}
+        {!inGrid && <AskCta className="mt-12 sm:flex-row sm:items-center sm:justify-between" />}
       </div>
 
       <dialog

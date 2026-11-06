@@ -13,7 +13,7 @@ export function whatsappUrl(message = clinic.whatsappMessage) {
 
 /** Link tel:. Enquanto o telefone estiver pendente, leva para a seção de contato. */
 export function phoneUrl() {
-  if (isPending(clinic.phone)) return '#contato';
+  if (isPending(clinic.phone)) return '#agende';
   const d = digits(clinic.phone);
   return `tel:+${d.startsWith('55') ? d : `55${d}`}`;
 }
@@ -34,20 +34,16 @@ export function mapsUrl() {
 }
 
 export const mapsEmbedUrl = () =>
-  `https://www.google.com/maps?q=${encodeURIComponent(`${clinic.name}, ${fullAddress()}`)}&output=embed`;
+  clinic.geo
+    ? `https://www.google.com/maps?q=${clinic.geo.lat},${clinic.geo.lng}&z=16&output=embed`
+    : `https://www.google.com/maps?q=${encodeURIComponent(`${clinic.name}, ${fullAddress()}`)}&output=embed`;
 
 export const hoursSummary = () => clinic.hours.map((h) => `${h.label}, ${h.time}`).join(' · ');
 
 export const hasTestimonials = clinic.testimonials.length > 0;
 export const showBeforeAfter = clinic.hasBeforeAfter && clinic.beforeAfter.length > 0;
 
-export const navItems = [
-  { href: '#clinica', label: 'A Clínica' },
-  { href: '#tratamentos', label: 'Tratamentos' },
-  { href: '#equipe', label: 'Equipe' },
-  ...(hasTestimonials ? [{ href: '#depoimentos', label: 'Depoimentos' }] : []),
-  { href: '#contato', label: 'Contato' },
-];
+export const navItems = [...clinic.nav, ...(hasTestimonials ? [{ href: '#depoimentos', label: 'Depoimentos' }] : [])];
 
 /**
  * Lista de marcadores pendentes (procura recursivamente no objeto de configuração).

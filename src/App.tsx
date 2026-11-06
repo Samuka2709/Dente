@@ -8,6 +8,8 @@ import { Footer } from './components/Footer';
 import { Gallery } from './components/Gallery';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { Highlights } from './components/Highlights';
+import { clinic } from './config/clinic';
 import { MobileCtaBar } from './components/MobileCtaBar';
 import { Team } from './components/Team';
 import { Testimonials } from './components/Testimonials';
@@ -32,10 +34,12 @@ export default function App() {
         <Hero />
         <About />
         <Treatments />
+        <Highlights />
         <Differentials />
         {/* Sem antes/depois autorizado, a posição vira a galeria (e a galeria não se repete adiante) */}
         {showBeforeAfter ? <BeforeAfter /> : <Gallery />}
-        <Team />
+        {/* Com um só profissional, a seção "Sobre" já o apresenta */}
+        {clinic.team.length > 1 && <Team />}
         <Testimonials />
         {showBeforeAfter && <Gallery />}
         <FAQ />

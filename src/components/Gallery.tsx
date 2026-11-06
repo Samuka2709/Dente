@@ -18,7 +18,7 @@ const layout = [
 export function Gallery() {
   const photos = images.gallery.slice(0, 6);
   return (
-    <section aria-labelledby="gallery-title" className="py-20 md:py-32">
+    <section id="consultorio" aria-labelledby="gallery-title" className="py-20 md:py-32">
       <div className="container-x">
         <div className="max-w-2xl">
           <p className="eyebrow" data-reveal>
