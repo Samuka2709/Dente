@@ -203,7 +203,11 @@ export const clinic = {
   ],
 
   differentials: [
-    { icon: 'calendar-check', title: 'Avaliação sem custo', text: 'A primeira avaliação não é cobrada.' },
+    {
+      icon: 'sparkles',
+      title: 'Estética e reabilitação',
+      text: 'Do tratamento de canal às lentes de contato, no mesmo consultório.',
+    },
     {
       icon: 'heart-handshake',
       title: 'Agende pelo WhatsApp',
@@ -234,13 +238,13 @@ export const clinic = {
   content: {
     heroEyebrow: 'Dentista em Ilhéus · BA',
     heroTitle: 'Implantes, lentes e canal em Ilhéus',
-    heroSubtitle: 'Consultório do Dr. Leonardo Netto. A primeira avaliação não é cobrada.',
+    heroSubtitle: 'Consultório do Dr. Leonardo Netto, cirurgião-dentista.',
 
     aboutEyebrow: 'Sobre o Dr. Leonardo',
     aboutTitle: 'Atendimento próximo, do diagnóstico ao resultado',
     aboutParagraphs: [
       'O Dr. Leonardo Netto é cirurgião-dentista em Ilhéus, na Bahia. No consultório, atende implantes e próteses, tratamento de canal, clareamento, restaurações em resina e lentes de contato dental.',
-      'Tudo começa pela avaliação, que não é cobrada: é o momento de examinar, conversar sobre o que incomoda e entender as opções de tratamento.',
+      'Tudo começa pela avaliação: é o momento de examinar, conversar sobre o que incomoda e entender as opções de tratamento.',
       '[FORMAÇÃO E TRAJETÓRIA DO DR. LEONARDO — A CONFIRMAR COM ELE]',
     ],
 
@@ -252,7 +256,6 @@ export const clinic = {
 
     faqTitle: 'Dúvidas frequentes',
     faq: [
-      { q: 'A avaliação é cobrada?', a: 'Não. A primeira avaliação não é cobrada.' },
       {
         q: 'Vocês atendem convênio?',
         a: '[RESPOSTA A CONFIRMAR PELO CONSULTÓRIO: convênios aceitos ou "atendimento particular".]',
