@@ -386,7 +386,7 @@ dialog::backdrop {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 120s linear infinite;
+  animation: marquee 100s linear infinite;
 }
 .marquee-list {
   display: flex;
