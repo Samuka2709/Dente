@@ -6,10 +6,10 @@ import { Ph } from './Ph';
 export function About() {
   const c = clinic.content;
   return (
-    <section id="sobre" aria-labelledby="about-title" className="bg-sand-soft py-20 md:py-32">
+    <section id="sobre" aria-labelledby="about-title" className="bg-sand-soft pb-20 pt-16 md:pb-32 md:pt-24">
       <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-8">
         {/* Foto: sticky no desktop enquanto o texto avança */}
-        <div className="lg:col-span-5 lg:col-start-1">
+        <div className="order-2 lg:order-none lg:col-span-5 lg:col-start-1">
           <div className="lg:sticky lg:top-28">
             <div data-mask className="overflow-hidden rounded-[14px]">
               <Img

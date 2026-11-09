@@ -3,20 +3,19 @@ import { images } from '../config/images';
 import { Img } from './Img';
 
 /**
- * Composição assimétrica de até 6 fotos.
- * Celular: 2 colunas (a primeira ocupa a largura toda). Desktop: grid de 12 colunas com alturas fixas.
+ * Uma foto grande e quatro menores alinhadas.
+ * Celular: 2 colunas (a primeira ocupa a largura toda). Desktop: grande à esquerda, 2×2 à direita.
  */
 const layout = [
-  'col-span-2 aspect-[4/3] lg:col-span-7 lg:row-span-2 lg:aspect-auto lg:h-[40rem]',
-  'aspect-[4/5] lg:col-span-4 lg:col-start-9 lg:aspect-auto lg:h-[16rem] lg:mt-8',
-  'aspect-[4/5] lg:col-span-5 lg:col-start-8 lg:aspect-auto lg:h-[20.5rem]',
-  'aspect-[4/5] lg:col-span-4 lg:col-start-2 lg:aspect-auto lg:h-[26rem] lg:mt-6',
-  'aspect-[4/5] lg:col-span-6 lg:col-start-7 lg:aspect-auto lg:h-[22rem] lg:mt-24',
-  'aspect-[4/5] lg:col-span-4 lg:aspect-auto lg:h-[22rem]',
+  'col-span-2 aspect-[4/3] lg:col-span-6 lg:row-span-2 lg:aspect-auto lg:h-full',
+  'aspect-[4/5] lg:col-span-3 lg:aspect-auto lg:h-[17rem]',
+  'aspect-[4/5] lg:col-span-3 lg:aspect-auto lg:h-[17rem]',
+  'aspect-[4/5] lg:col-span-3 lg:aspect-auto lg:h-[17rem]',
+  'aspect-[4/5] lg:col-span-3 lg:aspect-auto lg:h-[17rem]',
 ];
 
 export function Gallery() {
-  const photos = images.gallery.slice(0, 6);
+  const photos = images.gallery.slice(0, 5);
   return (
     <section id="consultorio" aria-labelledby="gallery-title" className="py-20 md:py-32">
       <div className="container-x">
@@ -33,14 +32,12 @@ export function Gallery() {
             <li
               key={i}
               data-gallery-item
-              className={`group overflow-hidden rounded-[14px] bg-sand ${layout[i] ?? 'aspect-[4/5]'} ${
-                photos.length % 2 === 0 && i === photos.length - 1 ? 'col-span-2 aspect-[16/9]' : ''
-              }`}
+              className={`group overflow-hidden rounded-[14px] bg-sand ${layout[i] ?? 'aspect-[4/5]'}`}
             >
               <Img
                 image={img}
                 widths={[400, 700, 1000, 1400]}
-                sizes={i === 0 ? '(min-width: 1024px) 55vw, 100vw' : '(min-width: 1024px) 34vw, 50vw'}
+                sizes={i === 0 ? '(min-width: 1024px) 48vw, 100vw' : '(min-width: 1024px) 24vw, 50vw'}
                 data-parallax
                 className="h-full w-full scale-[1.12] object-cover transition-[scale] duration-700 ease-out [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-[1.18]"
               />

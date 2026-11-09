@@ -9,7 +9,7 @@ import { Ph } from './Ph';
 export function Hero() {
   const c = clinic.content;
   return (
-    <section id="topo" aria-labelledby="hero-title" className="relative pb-20 pt-6 md:pb-28 lg:pt-10">
+    <section id="topo" aria-labelledby="hero-title" className="relative pb-14 pt-6 md:pb-20 lg:pt-10">
       <div className="container-x grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5 lg:py-12">
           <p className="eyebrow" data-hero-item style={{ animationDelay: '50ms' }}>

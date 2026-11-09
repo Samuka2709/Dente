@@ -48,6 +48,18 @@ export function Highlights() {
                     </p>
                   ))}
                 </div>
+                {h.steps && (
+                  <ol className="mt-8 grid gap-3 border-t border-taupe/50 pt-6" data-reveal aria-label="Como funciona">
+                    {h.steps.map((step, j) => (
+                      <li key={j} className="flex items-baseline gap-4">
+                        <span className="font-serif text-[1.35rem] leading-none text-green-deep [font-variant-numeric:lining-nums_tabular-nums]" aria-hidden>
+                          {String(j + 1).padStart(2, '0')}
+                        </span>
+                        <span className="text-ink/90">{step}</span>
+                      </li>
+                    ))}
+                  </ol>
+                )}
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row" data-reveal>
                   <a
                     href={whatsappUrl(`${clinic.whatsappGreeting} Tenho interesse em ${h.interest} e gostaria de agendar uma avaliação.`)}

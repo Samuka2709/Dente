@@ -54,9 +54,9 @@ export function ReviewsMarquee() {
       <figure className="flex h-full flex-col">
         <Stars />
         {t.text ? (
-          <blockquote className="mt-4 flex-1 text-[0.98rem] leading-relaxed text-bg/90">“{t.text}”</blockquote>
+          <blockquote className="mt-4 text-[0.98rem] leading-relaxed text-bg/90">“{t.text}”</blockquote>
         ) : (
-          <p className="mt-4 flex-1 font-serif text-[1.6rem] leading-snug text-bg/90">Avaliou com 5 estrelas.</p>
+          <p className="mt-4 font-serif text-[1.6rem] leading-snug text-bg/90">Avaliou com 5 estrelas.</p>
         )}
         <figcaption className="mt-5 text-[0.88rem]">
           <span className="font-semibold text-bg">{t.author}</span>
