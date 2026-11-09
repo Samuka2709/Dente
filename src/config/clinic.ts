@@ -259,6 +259,9 @@ export const clinic = {
    * Publicar só com autorização do Dr. Leonardo.
    */
   googleRating: { score: '5,0', count: 23, url: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6' },
+  /** Mostrar os depoimentos no site. Só ativar com autorização dos pacientes (LGPD/CFO). */
+  showTestimonials: false,
+
   testimonials: [
     {
       author: 'Will T.',

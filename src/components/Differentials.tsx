@@ -45,11 +45,9 @@ export function Differentials() {
               {clinic.content.differentialsTitle}
             </h2>
           </div>
-          {clinic.testimonials.length > 0 && (
-            <div data-reveal>
-              <GoogleRatingBadge />
-            </div>
-          )}
+          <div id="depoimentos" className="scroll-mt-28" data-reveal>
+            <GoogleRatingBadge />
+          </div>
         </div>
         <ul
           className={`mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 ${

@@ -44,7 +44,7 @@ export function GoogleRatingBadge() {
  */
 export function ReviewsMarquee() {
   const reviews = clinic.testimonials;
-  if (reviews.length === 0) return null;
+  if (!clinic.showTestimonials || reviews.length === 0) return null;
 
   const card = (t: (typeof reviews)[number], i: number) => (
     <li
@@ -67,7 +67,7 @@ export function ReviewsMarquee() {
   );
 
   return (
-    <div id="depoimentos" className="marquee mt-16 scroll-mt-24" aria-label="Avaliações de pacientes no Google">
+    <div className="marquee mt-16" aria-label="Avaliações de pacientes no Google">
       <div className="marquee-track">
         <ul className="marquee-list" aria-label="Avaliações">
           {reviews.map(card)}
