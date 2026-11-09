@@ -43,7 +43,8 @@ export function GoogleRatingBadge() {
  * Com movimento reduzido, vira uma faixa parada com rolagem manual.
  */
 export function ReviewsMarquee() {
-  const reviews = clinic.testimonials;
+  const examples = clinic.testimonialsAreExamples;
+  const reviews = examples ? clinic.exampleTestimonials : clinic.testimonials;
   if (!clinic.showTestimonials || reviews.length === 0) return null;
 
   const card = (t: (typeof reviews)[number], i: number) => (
@@ -60,14 +61,21 @@ export function ReviewsMarquee() {
         )}
         <figcaption className="mt-5 text-[0.88rem]">
           <span className="font-semibold text-bg">{t.author}</span>
-          <span className="text-sand"> · via {t.source}</span>
+          {t.source && <span className="text-sand"> · via {t.source}</span>}
         </figcaption>
       </figure>
     </li>
   );
 
   return (
-    <div className="marquee mt-16" aria-label="Avaliações de pacientes no Google">
+    <>
+    {examples && (
+      <p className="container-x mt-16 text-sm text-sand">
+        <span className="mr-2 rounded-full border border-dashed border-sand/60 px-2.5 py-0.5 text-[0.75rem] font-semibold uppercase tracking-wider">Exemplo</span>
+        Avaliações fictícias, só para mostrar o formato. As reais entram com autorização dos pacientes.
+      </p>
+    )}
+    <div className={`marquee ${examples ? 'mt-6' : 'mt-16'}`} aria-label="Avaliações de pacientes no Google">
       <div className="marquee-track">
         <ul className="marquee-list" aria-label="Avaliações">
           {reviews.map(card)}
@@ -77,5 +85,6 @@ export function ReviewsMarquee() {
         </ul>
       </div>
     </div>
+    </>
   );
 }

@@ -260,7 +260,16 @@ export const clinic = {
    */
   googleRating: { score: '5,0', count: 23, url: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6' },
   /** Mostrar os depoimentos no site. Só ativar com autorização dos pacientes (LGPD/CFO). */
-  showTestimonials: false,
+  showTestimonials: true,
+  /** Enquanto não houver autorização, o letreiro mostra só os textos de EXEMPLO abaixo (fictícios, sinalizados no site). */
+  testimonialsAreExamples: true,
+  exampleTestimonials: [
+    { text: 'Texto de exemplo: aqui entra a avaliação de um paciente, publicada somente com a autorização dele.', author: 'Paciente de exemplo', source: '' },
+    { text: 'Texto de exemplo: o paciente conta como foi o atendimento e a explicação de cada etapa do tratamento.', author: 'Paciente de exemplo', source: '' },
+    { text: 'Texto de exemplo: comentário sobre a recepção, o ambiente do consultório e a facilidade para agendar.', author: 'Paciente de exemplo', source: '' },
+    { text: 'Texto de exemplo: avaliação curta, de uma ou duas frases.', author: 'Paciente de exemplo', source: '' },
+    { text: 'Texto de exemplo: relato de quem fez uma consulta de avaliação e tirou as dúvidas com o Dr. Leonardo.', author: 'Paciente de exemplo', source: '' },
+  ],
 
   testimonials: [
     {
