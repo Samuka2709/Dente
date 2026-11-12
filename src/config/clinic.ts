@@ -97,7 +97,7 @@ export const clinic = {
   },
   mapsUrl: 'https://www.google.com/maps',
   /** Coordenadas do perfil no Google Maps — usadas no mapa incorporado */
-  geo: { lat: -14.7963921, lng: -39.0325573 },
+  geo: { lat: -23.5874, lng: -46.6576 },
 
   hours: [
     {
@@ -229,13 +229,9 @@ export const clinic = {
   ] as { icon: IconName; title: string; text: string }[],
 
   team: [
-    {
-      name: 'Dra. Nome do Profissional',
-      cro: 'CRO-UF [NÚMERO]',
-      specialty: 'Cirurgião-dentista',
-      bio: 'Implantes e próteses, tratamento de canal, clareamento e lentes de contato dental.',
-      photo: null,
-    },
+    { name: 'Dra. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Ortodontia', bio: 'Aparelhos fixos e alinhadores. Texto de exemplo.', photo: 'p1' },
+    { name: 'Dr. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Implantodontia', bio: 'Implantes e próteses. Texto de exemplo.', photo: 'p2' },
+    { name: 'Dr. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Endodontia', bio: 'Tratamento de canal. Texto de exemplo.', photo: 'p3' },
   ] as Professional[],
 
   /**

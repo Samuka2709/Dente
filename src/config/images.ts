@@ -97,7 +97,12 @@ export const images = {
     },
   ],
   /** Fotos da equipe: a chave é o valor de `photo` em clinic.team */
-  team: {} as Record<string, ImageSpec>,
+  team: {
+    // PROVISÓRIAS — profissionais de exemplo
+    p1: { unsplash: '1594824476967-48c8b964273f', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
+    p2: { unsplash: '1612349317150-e413f6a5b16d', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
+    p3: { unsplash: '1622253692010-333f2da6031d', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
+  } as Record<string, ImageSpec>,
   /** Antes e depois: a chave é o valor de `before`/`after` em clinic.beforeAfter */
   beforeAfter: {} as Record<string, ImageSpec>,
   /** Imagem de compartilhamento (WhatsApp, redes). 1200x630. */
