@@ -39,7 +39,7 @@ export function Differentials() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="eyebrow" data-reveal>
-              Avaliações
+              {clinic.googleRating || clinic.showTestimonials ? 'Avaliações' : 'Diferenciais'}
             </p>
             <h2 id="diff-title" className="h2 mt-4 text-bg" data-reveal>
               {clinic.content.differentialsTitle}

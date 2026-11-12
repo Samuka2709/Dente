@@ -253,7 +253,7 @@ export const clinic = {
   /** null = não mostra nota do Google (no modelo não há nota real). */
   googleRating: null as null | { score: string; count: number; url: string },
   /** Mostrar os depoimentos no site. Só ativar com autorização dos pacientes (LGPD/CFO). */
-  showTestimonials: true,
+  showTestimonials: false,
   /** Enquanto não houver autorização, o letreiro mostra só os textos de EXEMPLO abaixo (fictícios, sinalizados no site). */
   testimonialsAreExamples: true,
   exampleTestimonials: [
