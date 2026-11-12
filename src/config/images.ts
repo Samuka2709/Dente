@@ -29,7 +29,7 @@ export const images = {
     alt: 'Consultório odontológico com parede de pedra, luz natural e paciente em atendimento',
     provisional: true,
   },
-  // PROVISÓRIA — trocar por uma foto do Dr. Leonardo no consultório
+  // PROVISÓRIA — trocar por uma foto do profissional no consultório
   about: {
     unsplash: '1519710164239-da123dc03ef4',
     width: 1000,

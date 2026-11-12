@@ -14,6 +14,7 @@ function Stars({ size = 15 }: { size?: number }) {
 /** Selo com a nota do Google (dados do perfil, atualizar quando mudar) */
 export function GoogleRatingBadge() {
   const r = clinic.googleRating;
+  if (!r) return null;
   return (
     <a
       href={r.url}

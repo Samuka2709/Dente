@@ -4,8 +4,8 @@
  * Trocar de clínica = editar só este arquivo (e as fotos em `images.ts`).
  * Nenhum componente tem nome, telefone, endereço ou texto da clínica escrito direto.
  *
- * Cliente: Dr. Leonardo Netto — Ilhéus, BA. Dados informados pelo cliente/Instagram/Google.
- * Pendências: campos entre colchetes, fotos reais e o WhatsApp oficial (veja `whatsapp`).
+ * MODELO DE DEMONSTRAÇÃO: clínica fictícia, para apresentar a novos clientes.
+ * Para um cliente real, troque todos os dados abaixo e as fotos em `images.ts`.
  *
  * Tudo o que está entre colchetes, como `[TELEFONE]`, é um MARCADOR PENDENTE:
  * aparece destacado no site até ser substituído pelo dado real.
@@ -70,36 +70,32 @@ export const clinic = {
   /** true = mostra o aviso "Modelo de demonstração" no rodapé. Troque para false ao publicar. */
   demo: true,
 
-  name: 'Dr. Leonardo Netto',
+  name: 'Odonto Modelo',
   specialty: 'Odontologia',
-  city: 'Ilhéus',
+  city: 'Sua Cidade',
   neighborhood: 'Centro',
   state: 'BA',
 
   responsible: {
-    name: 'Dr. Leonardo Netto',
-    cro: 'CRO-BA [NÚMERO]',
+    name: 'Dra. Nome do Profissional',
+    cro: 'CRO-UF [NÚMERO]',
   },
 
-  /**
-   * TESTE: por enquanto os botões usam o número do Samuel.
-   * Para publicar, troque por: phone '(73) 99996-2912' e whatsapp '5573999962912' (WhatsApp do consultório).
-   */
+  /** Demonstração: os botões usam o WhatsApp do Samuel. */
   phone: '(73) 99825-8544',
   whatsapp: '5573998258544',
-  whatsappGreeting: 'Olá, Dr. Leonardo! Tudo bem?',
-  whatsappMessage: 'Olá, Dr. Leonardo! Tudo bem? Gostaria de agendar uma avaliação.',
+  whatsappGreeting: 'Olá! Tudo bem?',
+  whatsappMessage: 'Olá! Tudo bem? Gostaria de agendar uma avaliação.',
 
   address: {
-    street: 'Praça Rui Barbosa, 185', // Google Maps diz 185; o Instagram diz 184 — confirmar
-    complement: '1º andar',
+    street: 'Rua Exemplo, 100',
+    complement: 'Sala 1',
     neighborhood: 'Centro',
-    city: 'Ilhéus',
-    state: 'BA',
-    zip: '45653-340',
+    city: 'Sua Cidade',
+    state: 'UF',
+    zip: '00000-000',
   },
-  /** Link do perfil no Google Maps (informado pelo cliente) */
-  mapsUrl: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6',
+  mapsUrl: 'https://www.google.com/maps',
   /** Coordenadas do perfil no Google Maps — usadas no mapa incorporado */
   geo: { lat: -14.7963921, lng: -39.0325573 },
 
@@ -114,14 +110,14 @@ export const clinic = {
     { label: 'Sábado', time: '8h às 12h', days: ['Saturday'], opens: '08:00', closes: '12:00' },
   ] as OpeningHours[],
 
-  social: [{ label: 'Instagram', handle: '@dr_leonardonetto', url: 'https://www.instagram.com/dr_leonardonetto/' }],
+  social: [{ label: 'Instagram', handle: '@suaclinica', url: 'https://www.instagram.com/' }],
 
   insurance: '[CONVÊNIOS ACEITOS OU "PARTICULAR"]',
 
   logo: null as string | null,
-  audience: 'Adultos de Ilhéus e região',
+  audience: 'Adultos da cidade e região',
   tone: 'acolhedor e sofisticado',
-  siteUrl: 'https://leonardonetto-odonto.vercel.app',
+  siteUrl: 'https://example.com',
   privacyEmail: '[E-MAIL PARA PRIVACIDADE]',
 
   /** Menu: segue os destaques do Instagram do consultório */
@@ -194,7 +190,7 @@ export const clinic = {
       title: 'Lentes planejadas para o seu sorriso',
       text: [
         'As lentes de contato dental são lâminas finas, coladas sobre a frente dos dentes, que ajustam cor, forma e proporção.',
-        'Tudo começa pela avaliação: o Dr. Leonardo examina os dentes e a gengiva e explica se as lentes são indicadas no seu caso.',
+        'Tudo começa pela avaliação: o dentista examina os dentes e a gengiva e explica se as lentes são indicadas no seu caso.',
       ],
       steps: ['Avaliação dos dentes e da gengiva', 'Planejamento de cor, forma e proporção', 'Preparo e cimentação das lentes'],
       image: 'lentes',
@@ -227,15 +223,15 @@ export const clinic = {
     },
     {
       icon: 'map-pin',
-      title: 'Em Ilhéus',
+      title: 'Fácil de chegar',
       text: 'Consultório com localização no Google Maps para facilitar a chegada.',
     },
   ] as { icon: IconName; title: string; text: string }[],
 
   team: [
     {
-      name: 'Dr. Leonardo Netto',
-      cro: 'CRO-BA [NÚMERO]',
+      name: 'Dra. Nome do Profissional',
+      cro: 'CRO-UF [NÚMERO]',
       specialty: 'Cirurgião-dentista',
       bio: 'Implantes e próteses, tratamento de canal, clareamento e lentes de contato dental.',
       photo: null,
@@ -244,21 +240,18 @@ export const clinic = {
 
   /**
    * Vídeo de apresentação (formato vertical, como os Reels do Instagram).
-   * src null = mostra só a área reservada. Com autorização do Dr. Leonardo, salve o
+   * src null = mostra só a área reservada. Salve o
    * arquivo em public/video/ (MP4) e preencha src e poster, ex.: '/video/apresentacao.mp4'.
    */
   video: {
     src: null as string | null,
     poster: null as string | null,
-    title: 'Conheça o Dr. Leonardo',
-    text: 'Um pouco sobre o consultório e a forma de atender, contado pelo próprio Dr. Leonardo.',
+    title: 'Conheça o consultório',
+    text: 'Um pouco sobre o consultório e a forma de atender, contado pelo próprio dentista.',
   },
 
-  /**
-   * Avaliações do perfil no Google (transcritas dos prints, sem emojis; nome abreviado).
-   * Publicar só com autorização do Dr. Leonardo.
-   */
-  googleRating: { score: '5,0', count: 23, url: 'https://maps.app.goo.gl/qttGs9PhnpCaHEFD6' },
+  /** null = não mostra nota do Google (no modelo não há nota real). */
+  googleRating: null as null | { score: string; count: number; url: string },
   /** Mostrar os depoimentos no site. Só ativar com autorização dos pacientes (LGPD/CFO). */
   showTestimonials: true,
   /** Enquanto não houver autorização, o letreiro mostra só os textos de EXEMPLO abaixo (fictícios, sinalizados no site). */
@@ -268,102 +261,25 @@ export const clinic = {
     { text: 'Texto de exemplo: o paciente conta como foi o atendimento e a explicação de cada etapa do tratamento.', author: 'Paciente de exemplo', source: '' },
     { text: 'Texto de exemplo: comentário sobre a recepção, o ambiente do consultório e a facilidade para agendar.', author: 'Paciente de exemplo', source: '' },
     { text: 'Texto de exemplo: avaliação curta, de uma ou duas frases.', author: 'Paciente de exemplo', source: '' },
-    { text: 'Texto de exemplo: relato de quem fez uma consulta de avaliação e tirou as dúvidas com o Dr. Leonardo.', author: 'Paciente de exemplo', source: '' },
+    { text: 'Texto de exemplo: relato de quem fez uma consulta de avaliação e tirou as dúvidas com o dentista.', author: 'Paciente de exemplo', source: '' },
   ],
 
-  testimonials: [
-    {
-      author: 'Will T.',
-      source: 'Google',
-      text: 'Excelente profissional! Atendimento de qualidade, muito atencioso e transmite confiança em cada detalhe. Ambiente organizado e serviço impecável. Recomendo demais o trabalho do Dr. Leonardo Neto!',
-    },
-    {
-      author: 'Leticia L.',
-      source: 'Google',
-      text: 'Precisei fazer canal e o Dr. Leonardo foi incrível. Profissional super humano, me deixou tranquilo do início ao fim. Não senti dor nenhuma. O consultório é moderno, tecnológico e o serviço é de ótima qualidade. Super recomendo!!!!',
-    },
-    {
-      author: 'Amanda C.',
-      source: 'Google',
-      text: 'Dr. Leonardo é excelente. Atendimento de qualidade, profissional atencioso e serviço impecável. Superou minhas expectativas!',
-    },
-    {
-      author: 'Luizinho',
-      source: 'Google',
-      text: 'Meu pai fez a prótese com o Dr. Leonardo. Ele tinha receio do procedimento, mas o Dr. foi extremamente atencioso e cuidadoso com ele. Não poderia ter escolhido profissional melhor.',
-    },
-    {
-      author: 'Camila K.',
-      source: 'Google',
-      text: 'Fiz um implante unitário com o Dr. Leonardo e foi tudo impecável. Ambiente moderno, tecnológico e muito confortável. Atendimento de qualidade do início ao fim. Profissional excelente, recomendo de olhos fechados.',
-    },
-    {
-      author: 'Chrys C.',
-      source: 'Google',
-      text: 'Excelente profissional, trabalho impecável e atendimento top. Super recomendo de olhos fechados.',
-    },
-    {
-      author: 'Jhenefhen O.',
-      source: 'Google',
-      text: 'Ótimo profissional Dr Leonardo, me deixou super confiante e com um sorriso lindo. Indico demais!',
-    },
-    {
-      author: 'Diogo B.',
-      source: 'Google',
-      text: 'Melhor consultório odontológico da região! Mesmo morando em Itabuna, só vou nele pelo profissionalismo, qualidade e dedicação.',
-    },
-    {
-      author: 'Daniel M.',
-      source: 'Google',
-      text: 'Excelente profissional, fiquei muito feliz com o resultado do atendimento!! Super recomendo!!!!!',
-    },
-    {
-      author: 'Bruno L.',
-      source: 'Google',
-      text: 'Excelente profissional!! Atencioso e muito dedicado!! Super recomendo!!',
-    },
-    { author: 'Ingred N.', source: 'Google', text: 'Atendimento excelente! Melhor profissional.' },
-    { author: 'Thierry V.', source: 'Google', text: 'Excelente profissional, gostei muito do atendimento.' },
-    {
-      author: 'Tatiana V.',
-      source: 'Google',
-      text: 'Excelente atendimento, profissional da mais alta qualidade. Recomendo demais!',
-    },
-    { author: 'Karol T.', source: 'Google', text: 'Atendimento maravilhoso, doutor super atencioso!!' },
-    { author: 'Carlas A.', source: 'Google', text: 'Uma ótima experiência, doutor Leonardo é excelente profissional.' },
-    { author: 'Marli M.', source: 'Google', text: 'Atendimento de qualidade, excelente profissional!' },
-    {
-      author: 'Rafael L.',
-      source: 'Google',
-      text: 'Excelente profissional! Atendimento, tecnologia e profissionalismo!!!!!',
-    },
-    {
-      author: 'Achilles A.',
-      source: 'Google',
-      text: 'Super indico, atendimento humanizado e me senti muito confortável com o atendimento de Dr. Leonardo.',
-    },
-    { author: 'Adriane S.', source: 'Google', text: 'O melhor da região! Atendimento sem igual.' },
-    { author: 'Carolina N.', source: 'Google', text: 'Profissional maravilhoso!!!!' },
-    { author: 'Marcel C.', source: 'Google', text: 'Excelente profissional!' },
-    // Avaliações só com estrelas, sem comentário
-    { author: 'Nilla C.', source: 'Google', text: '' },
-    { author: 'Rafael R.', source: 'Google', text: '' },
-  ] as Testimonial[],
+  testimonials: [] as Testimonial[],
 
   hasBeforeAfter: false,
   beforeAfter: [] as { treatment: string; before: string; after: string }[],
 
   content: {
-    heroEyebrow: 'Dentista em Ilhéus · BA',
-    heroTitle: 'Implantes, lentes e canal em Ilhéus',
-    heroSubtitle: 'Consultório do Dr. Leonardo Netto, cirurgião-dentista.',
+    heroEyebrow: 'Odontologia · Sua Cidade',
+    heroTitle: 'Implantes, lentes e canal perto de você',
+    heroSubtitle: 'Consultório odontológico com atendimento próximo, do diagnóstico ao tratamento.',
 
-    aboutEyebrow: 'Sobre o Dr. Leonardo',
+    aboutEyebrow: 'Sobre o consultório',
     aboutTitle: 'Atendimento próximo, do diagnóstico ao resultado',
     aboutParagraphs: [
-      'O Dr. Leonardo Netto é cirurgião-dentista em Ilhéus, na Bahia. No consultório, atende implantes e próteses, tratamento de canal, clareamento, restaurações em resina e lentes de contato dental.',
+      'Aqui entra a apresentação do dentista e do consultório. No consultório, são atendidos implantes e próteses, tratamento de canal, clareamento, restaurações em resina e lentes de contato dental.',
       'Tudo começa pela avaliação: é o momento de examinar, conversar sobre o que incomoda e entender as opções de tratamento.',
-      '[FORMAÇÃO E TRAJETÓRIA DO DR. LEONARDO — A CONFIRMAR COM ELE]',
+      '[FORMAÇÃO E TRAJETÓRIA DO PROFISSIONAL]',
     ],
 
     treatmentsTitle: 'Tratamentos',

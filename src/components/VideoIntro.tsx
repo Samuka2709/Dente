@@ -42,7 +42,7 @@ export function VideoIntro() {
                   <Play aria-hidden size={26} strokeWidth={1.75} className="translate-x-0.5" />
                 </span>
                 <span className="ph text-[0.9rem] text-bg">[VÍDEO DE APRESENTAÇÃO]</span>
-                <span className="max-w-[24ch] text-sm text-sand">Espaço reservado para o vídeo do Dr. Leonardo.</span>
+                <span className="max-w-[24ch] text-sm text-sand">Espaço reservado para o vídeo de apresentação.</span>
               </div>
             )}
           </div>

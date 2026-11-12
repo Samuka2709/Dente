@@ -68,7 +68,7 @@ export function Hero() {
                 <Ph>{hoursSummary()}</Ph>
               </span>
             </li>
-            {clinic.testimonials.length > 0 && (
+            {clinic.googleRating && (
               <li className="flex items-start gap-2.5">
                 <Star aria-hidden size={18} strokeWidth={0} fill="currentColor" className="mt-1 shrink-0 text-green" />
                 <a
