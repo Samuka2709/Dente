@@ -40,7 +40,7 @@ export default function App() {
         {/* Sem antes/depois autorizado, a posição vira a galeria (e a galeria não se repete adiante) */}
         {showBeforeAfter ? <BeforeAfter /> : <Gallery />}
         {/* Com um só profissional, a seção "Sobre" já o apresenta */}
-        {clinic.team.length > 1 && <Team />}
+        {clinic.team.length > 0 && <Team />}
         {showBeforeAfter && <Gallery />}
         <FAQ />
         <Contact />

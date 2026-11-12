@@ -229,9 +229,7 @@ export const clinic = {
   ] as { icon: IconName; title: string; text: string }[],
 
   team: [
-    { name: 'Dra. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Ortodontia', bio: 'Aparelhos fixos e alinhadores. Texto de exemplo.', photo: 'p1' },
-    { name: 'Dr. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Implantodontia', bio: 'Implantes e próteses. Texto de exemplo.', photo: 'p2' },
-    { name: 'Dr. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Endodontia', bio: 'Tratamento de canal. Texto de exemplo.', photo: 'p3' },
+    { name: 'Dra. Nome Exemplo', cro: 'CRO-UF [NÚMERO]', specialty: 'Cirurgiã-dentista', bio: 'Implantes, lentes de contato dental, clareamento e tratamento de canal. Texto de exemplo.', photo: 'p1' },
   ] as Professional[],
 
   /**

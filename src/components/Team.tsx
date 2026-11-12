@@ -17,7 +17,7 @@ export function Team() {
           </h2>
         </div>
 
-        <ul className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
+        <ul className={`mt-14 grid gap-x-8 gap-y-14 ${clinic.team.length === 1 ? 'max-w-sm' : 'sm:grid-cols-2 lg:grid-cols-3'}`} data-stagger>
           {clinic.team.map((p, i) => {
             const photo = p.photo ? images.team[p.photo] : undefined;
             return (
