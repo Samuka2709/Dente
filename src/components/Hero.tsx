@@ -75,7 +75,7 @@ export function Hero() {
                   href="#depoimentos"
                   className="underline decoration-taupe underline-offset-4 hover:decoration-current"
                 >
-                  Nota {clinic.googleRating.score} no Google · {clinic.googleRating.count} avaliações
+                  Nota {clinic.googleRating.score} no Google · {clinic.googleRating.count} avaliações{clinic.googleRating.example ? ' (exemplo)' : ''}
                 </a>
               </li>
             )}

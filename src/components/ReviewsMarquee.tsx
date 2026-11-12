@@ -26,7 +26,7 @@ export function GoogleRatingBadge() {
       <span className="flex flex-col gap-1.5">
         <Stars size={16} />
         <span className="flex items-center gap-1 text-[0.9rem] text-sand">
-          {r.count} avaliações no Google
+          {r.count} avaliações no Google{r.example ? ' (exemplo)' : ''}
           <ArrowUpRight
             aria-hidden
             size={16}
