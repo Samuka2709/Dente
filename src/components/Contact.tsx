@@ -82,7 +82,7 @@ function ContactForm() {
       className="grid gap-5 rounded-[14px] border border-bg/25 p-7 md:p-9"
       aria-describedby={`${id}-lgpd`}
     >
-      <h3 className="text-[2rem] text-bg">Prefere que a gente chame?</h3>
+      <h3 className="text-[2rem] text-bg">Prefere deixar seus dados?</h3>
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="grid gap-2">
           <label htmlFor={`${id}-nome`} className="text-sm font-semibold">
