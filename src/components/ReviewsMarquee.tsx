@@ -1,12 +1,20 @@
 import { ArrowUpRight, Star } from 'lucide-react';
 import { clinic } from '../config/clinic';
 
-function Stars({ size = 15 }: { size?: number }) {
+function Stars({ size = 15, score = 5 }: { size?: number; score?: number }) {
   return (
     <span className="flex gap-0.5 text-sand" aria-hidden>
-      {Array.from({ length: 5 }, (_, i) => (
-        <Star key={i} size={size} strokeWidth={0} fill="currentColor" />
-      ))}
+      {Array.from({ length: 5 }, (_, i) => {
+        const fill = Math.max(0, Math.min(1, score - i));
+        return (
+          <span key={i} className="relative inline-block" style={{ width: size, height: size }}>
+            <Star size={size} strokeWidth={1.5} className="absolute inset-0 opacity-40" />
+            <span className="absolute inset-0 overflow-hidden" style={{ width: `${fill * 100}%` }}>
+              <Star size={size} strokeWidth={0} fill="currentColor" />
+            </span>
+          </span>
+        );
+      })}
     </span>
   );
 }
@@ -24,7 +32,7 @@ export function GoogleRatingBadge() {
     >
       <span className="font-serif text-[3rem] leading-none text-bg">{r.score}</span>
       <span className="flex flex-col gap-1.5">
-        <Stars size={16} />
+        <Stars size={16} score={parseFloat(r.score.replace(',', '.'))} />
         <span className="flex items-center gap-1 text-[0.9rem] text-sand">
           {r.count} avaliações no Google{r.example ? ' (exemplo)' : ''}
           <ArrowUpRight

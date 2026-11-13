@@ -1,6 +1,8 @@
 import { Play } from 'lucide-react';
 import { clinic } from '../config/clinic';
 import { Ph } from './Ph';
+import { Img } from './Img';
+import { images } from '../config/images';
 
 /**
  * Vídeo de apresentação em formato vertical (9:16).
@@ -37,13 +39,21 @@ export function VideoIntro() {
                 aria-label={v.title}
               />
             ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 p-8 text-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border border-bg/30 text-bg">
-                  <Play aria-hidden size={26} strokeWidth={1.75} className="translate-x-0.5" />
-                </span>
-                <span className="ph text-[0.9rem] text-bg">[VÍDEO DE APRESENTAÇÃO]</span>
-                <span className="max-w-[24ch] text-sm text-sand">Espaço reservado para o vídeo de apresentação.</span>
-              </div>
+              <>
+                <Img
+                  image={images.videoPoster}
+                  widths={[360, 540, 720]}
+                  sizes="22rem"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-deep/90 via-green-deep/20 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="flex h-18 w-18 items-center justify-center rounded-full bg-bg/90 text-green shadow-lg">
+                    <Play aria-hidden size={28} strokeWidth={0} fill="currentColor" className="translate-x-0.5" />
+                  </span>
+                </div>
+                <p className="absolute inset-x-0 bottom-0 p-6 text-sm text-bg/90">Vídeo de apresentação · em breve</p>
+              </>
             )}
           </div>
         </div>

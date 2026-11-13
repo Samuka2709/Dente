@@ -61,7 +61,7 @@ export function Differentials() {
             const Icon = icons[d.icon] ?? Sparkles;
             return (
               <li key={i} data-card className="border-t border-bg/20 pt-6">
-                <Icon aria-hidden size={26} strokeWidth={1.75} className="text-sand" />
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-bg/10 ring-1 ring-bg/15"><Icon aria-hidden size={26} strokeWidth={1.5} className="text-sand" /></span>
                 <h3 className="mt-5 text-[1.85rem] text-bg">
                   <Ph>{d.title}</Ph>
                 </h3>

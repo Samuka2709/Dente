@@ -56,50 +56,22 @@ export const images = {
   },
   gallery: [
     // PROVISÓRIA
-    {
-      unsplash: '1616391182219-e080b4d1043a',
-      width: 1400,
-      height: 1000,
-      alt: 'Consultório com cadeira odontológica e bancada',
-      provisional: true,
-    },
+    { unsplash: '1629909613654-28e377c37b09', width: 1400, height: 1000, alt: 'Sala de atendimento clara com cadeira odontológica', provisional: true },
     // PROVISÓRIA
-    {
-      unsplash: '1607613009820-a29f7bb81c04',
-      width: 900,
-      height: 1000,
-      alt: 'Escovas de dente de bambu em um copo de vidro',
-      provisional: true,
-    },
+    { unsplash: '1629909615184-74f495363b67', width: 1000, height: 1000, alt: 'Consultório amplo com cadeira e equipamentos', provisional: true },
     // PROVISÓRIA
-    {
-      unsplash: '1606265752439-1f18756aa5fc',
-      width: 1000,
-      height: 900,
-      alt: 'Dentista com espelho e sonda odontológica',
-      provisional: true,
-    },
+    { unsplash: '1598256989800-fe5f95da9787', width: 1000, height: 1000, alt: 'Sala de atendimento com cadeira odontológica', provisional: true },
     // PROVISÓRIA
-    {
-      unsplash: '1588776814546-daab30f310ce',
-      width: 900,
-      height: 1100,
-      alt: 'Dentista atendendo paciente na cadeira',
-      provisional: true,
-    },
+    { unsplash: '1606811841689-23dfddce3e95', width: 1000, height: 1000, alt: 'Dentista explicando um exame para a paciente', provisional: true },
     // PROVISÓRIA
-    {
-      unsplash: '1666214280557-f1b5022eb634',
-      width: 1200,
-      height: 850,
-      alt: 'Dentistas analisando um exame na tela do computador',
-      provisional: true,
-    },
+    { unsplash: '1593022356769-11f762e25ed9', width: 1000, height: 1000, alt: 'Modelo de dentes com implante', provisional: true },
   ],
+  /** Capa da área do vídeo enquanto não há vídeo — PROVISÓRIA */
+  videoPoster: { unsplash: '1588776814546-daab30f310ce', width: 900, height: 1600, alt: 'Dentista atendendo paciente', provisional: true } as ImageSpec,
   /** Fotos da equipe: a chave é o valor de `photo` em clinic.team */
   team: {
     // PROVISÓRIAS — profissionais de exemplo
-    p1: { unsplash: '1594824476967-48c8b964273f', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
+    p1: { unsplash: '1606265752439-1f18756aa5fc', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
     p2: { unsplash: '1612349317150-e413f6a5b16d', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
     p3: { unsplash: '1622253692010-333f2da6031d', width: 1000, height: 1250, alt: 'Profissional de exemplo', provisional: true },
   } as Record<string, ImageSpec>,
